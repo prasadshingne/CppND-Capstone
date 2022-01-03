@@ -1,0 +1,7 @@
+window width=1280
+window height=720
+line thickness=20
+player height=128
+simulation runtime=60
+ball X velocity=-300.0f
+ball Y velocity=200.0f
