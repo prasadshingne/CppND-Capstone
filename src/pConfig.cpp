@@ -47,3 +47,25 @@ pConfig::pConfig(const string path){
         }
     }
 }
+
+size_t pConfig::getWinWidth() const{
+    return _winWidth;
+}
+size_t pConfig::getWinHeight() const{
+    return _winHeight;
+}
+size_t pConfig::getLineThickness() const{
+    return _lineThickness;
+}
+size_t pConfig::getPlayerHeight() const{
+    return _playerHeight;
+}
+size_t pConfig::getSimRuntime() const{
+    return _simRuntime;
+}
+float pConfig::getBallXVel() const{
+    return _ballXVel;
+}
+float pConfig::getBallYVel() const{
+    return _ballYVel;
+}

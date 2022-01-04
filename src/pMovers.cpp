@@ -1,5 +1,9 @@
 #include "pMovers.h"
 
+pMovers::pMovers() {}
+
+pMovers::~pMovers() {}
+
 pMovers::pMovers(int x, int y, int width, int height, int red, int grn, int blu, int a) : 
     _x(x), _y(y), _width(width), _height(height), _red(red), _grn(grn), _a(a) {}
 

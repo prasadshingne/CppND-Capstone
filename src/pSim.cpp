@@ -226,3 +226,11 @@ void pSim::player1Scores(){
 void pSim::player2Scores(){
     _scorePlayer2++;
 }
+
+int pSim::getScorePlayer1(){
+    return _scorePlayer1;
+}
+
+int pSim::getScorePlayer2(){
+    return _scorePlayer2;
+}
