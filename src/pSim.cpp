@@ -14,19 +14,21 @@ pSim::pSim(size_t winWidth, size_t winHeight, size_t playerHeight,
 
         // Player 1 on the left (blue)
         _player1 = pPlayer(lineThickness+distPlayerGoal, playerY,
-        lineThickness,playerHeight,0,0,200,255,0);
+        lineThickness,playerHeight,0,0,255,255,0);
 
-        // Player 2 on the right (green)
-        _player2 = pPlayer(winHeight-2*lineThickness-distPlayerGoal, playerY,
-        lineThickness,playerHeight,0,200,0,255,0);
+        // Player 2 on the right (red)
+        _player2 = pPlayer(winWidth-2*lineThickness-distPlayerGoal, playerY,
+        lineThickness,playerHeight,170,0,170,255,0);
 
         // Ball initialized in the center with gray color with initial velocity
         _ball = pBall(static_cast<int>(winWidth/2 - lineThickness/2),
                       static_cast<int>(Ycenter-lineThickness/2),
-                      lineThickness, lineThickness, 0, 0, 0, 255, 
+                      lineThickness, lineThickness, 170, 170, 170, 255, 
                       ballXVel, ballYVel);
 
-    }
+        cout << "Game initialized." << endl;
+
+}
 
 pSim::~pSim(){
     cout << "Game destroyed." << endl;
@@ -68,11 +70,10 @@ void pSim::run(pRenderer &renderer, pMove &Move_){
         }
         remainder = static_cast<int>((gameEnd-frameStart)/1000);
         renderer.UpdateWindowTitle(_scorePlayer1, _scorePlayer2, remainder);
-
-        SDL_Delay(2000);
-        cout << "Game ended." << endl;
-
     }
+
+    SDL_Delay(2000);
+    cout << "Game ended." << endl;
 }
 
 void pSim::updateSim(){
@@ -120,7 +121,7 @@ void pSim::movePlayer1(){
     if(_player1.getDirection() != 0){
         // calculate player's new position
         int player1Y = _player1.getY() + 
-        _player1.getDirection() * static_cast<int>(_lineThickness/4);
+        _player1.getDirection() * static_cast<int>(_lineThickness/4)*2;
 
         // ensure player 1 stays on screen
         if(player1Y >= _lineThickness && 
@@ -136,7 +137,7 @@ void pSim::movePlayer2(){
     if(_player2.getDirection() != 0){
         // calculate player's new position
         int player2Y = _player2.getY() + 
-        _player2.getDirection() * static_cast<int>(_lineThickness/4);
+        _player2.getDirection() * static_cast<int>(_lineThickness/4)*2;
 
         // ensure player 2 stays on screen
         if(player2Y >= _lineThickness && 

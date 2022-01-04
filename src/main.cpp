@@ -22,8 +22,8 @@ int main(){
     
     sim.run(renderer, mov);
 
-    cout << "Final score : Player1 = " << sim.getScorePlayer1() << 
-            "Player 2 = " << sim.getScorePlayer2() << endl;
+    cout << "Final score : Player No. 1 = " << sim.getScorePlayer1() << 
+            ", Player No. 2 = " << sim.getScorePlayer2() << endl;
     
     return 0;
 }
