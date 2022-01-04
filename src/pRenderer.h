@@ -1,7 +1,7 @@
 #ifndef PRENDERER_H
 #define PRENDERER_H
 
-#include <SDL2/SDL.h>
+#include "SDL.h"
 #include "pMovers.h"
 #include "pPlayer.h"
 #include "pBall.h"

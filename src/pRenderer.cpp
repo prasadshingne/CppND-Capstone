@@ -2,8 +2,8 @@
 
 using namespace std;
 
-pRenderer::pRenderer(const std::size_t winWidth, const std::size_t winHeight,
-                     const std::size_t playerHeight, const std::size_t lineThickness) :
+pRenderer::pRenderer(const size_t winWidth, const size_t winHeight,
+                     const size_t playerHeight, const size_t lineThickness) :
                     _winWidth(static_cast<int>(winWidth)),
                     _winHeight(static_cast<int>(winHeight)),
                     _playerHeight(static_cast<int>(playerHeight)),

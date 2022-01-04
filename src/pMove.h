@@ -1,7 +1,7 @@
 #ifndef PMOVE_H
 #define PMOVE_H
 
-#include <SDL2/SDL.h>
+#include "SDL.h"
 #include "pPlayer.h"
 
 class pMove{

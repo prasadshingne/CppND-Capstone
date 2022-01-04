@@ -1,7 +1,9 @@
-#include<iostream>
+#include <iostream>
 #include "pConfig.h"
 #include "pSim.h"
 #include "pRenderer.h"
+
+using namespace std;
 
 int main(){
     pConfig config("sim_config.txt");
