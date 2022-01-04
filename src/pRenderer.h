@@ -6,10 +6,12 @@
 #include "pPlayer.h"
 #include "pBall.h"
 
+using namespace std;
+
 class pRenderer {
     public:
-        pRenderer(const std::size_t winWidth, const std::size_t winHeight,
-                 const std::size_t playerHeight, const std::size_t lineThickness);
+        pRenderer(const size_t winWidth, const size_t winHeight,
+                 const size_t playerHeight, const size_t lineThickness);
         ~pRenderer();
 
     void Render(const pPlayer player1, const pPlayer player2, const pBall ball);
@@ -22,8 +24,8 @@ class pRenderer {
 
         const int _winWidth;
         const int _winHeight;
-        const std::size_t _playerHeight;
-        const std::size_t _lineThickness;
+        const size_t _playerHeight;
+        const size_t _lineThickness;
         bool _sdlInit;        
 };
 

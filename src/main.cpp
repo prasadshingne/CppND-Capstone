@@ -1,22 +1,27 @@
-#include <iostream>
-#include "controller.h"
-#include "game.h"
-#include "renderer.h"
+#include<iostream>
+#include "pConfig.h"
+#include "pSim.h"
+#include "pRenderer.h"
 
-int main() {
-  constexpr std::size_t kFramesPerSecond{60};
-  constexpr std::size_t kMsPerFrame{1000 / kFramesPerSecond};
-  constexpr std::size_t kScreenWidth{640};
-  constexpr std::size_t kScreenHeight{640};
-  constexpr std::size_t kGridWidth{32};
-  constexpr std::size_t kGridHeight{32};
+int main(){
+    pConfig config("sim_config.txt");
+    pRenderer renderer(config.getWinWidth(),config.getWinHeight(),
+                       config.getPlayerHeight(), config.getLineThickness());
+    
+    if(!renderer.wasInit()){
+        cerr << "Renderer not initialized." << endl;
+        return 1;
+    }
 
-  Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
-  Controller controller;
-  Game game(kGridWidth, kGridHeight);
-  game.Run(controller, renderer, kMsPerFrame);
-  std::cout << "Game has terminated successfully!\n";
-  std::cout << "Score: " << game.GetScore() << "\n";
-  std::cout << "Size: " << game.GetSize() << "\n";
-  return 0;
+    pMove mov;
+    pSim sim(config.getWinWidth(), config.getWinHeight(), config.getPlayerHeight(),
+             config.getLineThickness(), config.getSimRuntime(), 
+             config.getBallXVel(), config.getBallYVel());
+    
+    sim.run(renderer, mov);
+
+    cout << "Final score : Player1 = " << sim.getScorePlayer1() << 
+            "Player 2 = " << sim.getScorePlayer2() << endl;
+    
+    return 0;
 }

@@ -2,7 +2,7 @@
 #define PMOVE_H
 
 #include <SDL2/SDL.h>
-#include "pPlayer.h";
+#include "pPlayer.h"
 
 class pMove{
     private:
