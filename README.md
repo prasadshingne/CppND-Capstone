@@ -1,6 +1,11 @@
-# CPPND: Capstone Snake Game Example
+# C++ Nanodegree Final Project: Two person Pong Game
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+This is an implementation of the Pong game. The following resources provided inspiration and guidance for the implementation.
+
+* https://github.com/BassLC/Pong/blob/master/pong.cpp
+* https://github.com/gameprogcpp/code/blob/master/Chapter01/Game.cpp
+* https://www.youtube.com/watch?v=DeKfZhwyFO4
+
 
 <img src="snake_game.gif"/>
 

@@ -105,7 +105,7 @@ void pRenderer::Render(const pPlayer player1, const pPlayer player2, const pBall
 
 void pRenderer::UpdateWindowTitle(const int player1score, const int player2score, const int remainder){
     string title{"Player 1: " + to_string(player1score) + " Player 2: " + 
-    to_string(player2score) + " Remaining : " + to_string(remainder)};
+    to_string(player2score) + " Time Remaining : " + to_string(remainder) + " s"};
     SDL_SetWindowTitle(_sdlWindow, title.c_str());
 }
 
