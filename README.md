@@ -67,15 +67,29 @@ The source code is in the [/src](https://github.com/prasadshingne/CppND-Capstone
 
 ### README (All Rubric Points REQUIRED)
 
-- [x] A README with instructions is included with the project
-- 
+- [x] A README with instructions is included with the project.
+- [x] The README describes the project you have built.
+- [x] The README includes information about each rubric point addressed - see below.
 
 ### Compiling and Testing (All Rubric Points REQUIRED)
 
+- [x] The submission must compile and run.
+
 ### Loops, Function, I/O
+
+- [x] The project demonstrates an understanding of C++ functions and control structures - All of the source code in /src use control structures and functions. [pSim.cpp](https://github.com/prasadshingne/CppND-Capstone/blob/master/src/pSim.cpp) contains the most number of control structures and functions.
+- [x] The project reads data from a file and process the data, or the program writes data to a file - game parameters are read from file sim_config.txt within file [pConfig.cpp](https://github.com/prasadshingne/CppND-Capstone/blob/master/src/pConfig.cpp).
+- [x] The project accepts user input and processes the input - pSim.cpp uses [pMove.cpp](https://github.com/prasadshingne/CppND-Capstone/blob/master/src/pMove.cpp) to read input from the keyboard and processes it to update the location of the players, at [line 120](https://github.com/prasadshingne/CppND-Capstone/blob/da7ab4f28ed1517ecdb8e8b27fc31f621c62a839/src/pSim.cpp#L120) and [line 136](https://github.com/prasadshingne/CppND-Capstone/blob/da7ab4f28ed1517ecdb8e8b27fc31f621c62a839/src/pSim.cpp#L136).
 
 ### Object Oriented Programming
 
+- [x] The project uses Object Oriented Programming techniques. The project code is organized into classes with appropriate attributes and methods, namely in pBall.cpp, pMove.cpp, pMovers.cpp, pPlayer.cpp, pRenderer.cpp and pSim.cpp.
+- [x] Classes use appropriate access specifiers for class members. All the classes in the previous point use appropriate access specifiers. Example - pMovers.cpp defines protected and public members and defines functions to access these.
+- [x] Class constructors utilize member initialization lists. Class pPlayer and pBall use member initialization lists.
+- [x] Classes encapsulate behavior. Classes pBall, pPlayer and pSim have appropriate data and functions grouped together. Class states are accessed via member functions.
+- [x] Overloaded functions allow the same function to operate on different parameters. pMovers, pBall and pPlayer classes have overloaded constructors.
+
 ### Memory Management
 
-
+- [x] The project makes use of references in function declarations. Pass-by-reference at [line 3](https://github.com/prasadshingne/CppND-Capstone/blob/da7ab4f28ed1517ecdb8e8b27fc31f621c62a839/src/pMove.cpp#L3) in pMove.cpp and [line 37](https://github.com/prasadshingne/CppND-Capstone/blob/da7ab4f28ed1517ecdb8e8b27fc31f621c62a839/src/pSim.cpp#L37) in pSim.cpp.
+- [x] The project uses destructors appropriately. Class pRender uses desctructor as defined on [line 32](https://github.com/prasadshingne/CppND-Capstone/blob/da7ab4f28ed1517ecdb8e8b27fc31f621c62a839/src/pRenderer.cpp#L32) in pRenderer.cpp.
