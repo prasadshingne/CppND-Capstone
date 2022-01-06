@@ -52,9 +52,23 @@ More game parameters can be changed in -
 
 ## File Structure
 
+The source code is in the [/src](https://github.com/prasadshingne/CppND-Capstone/tree/master/src) folder.
+
+* main.cpp - the driver file that initiates and runs the interactive simulation/game.
+* pBall.h and pBall.cpp - the decleration and definition of the "Ball" which derives from pMovers class.
+* pConfig.h and pConfig.cpp - reads and sets up the game based on parameters from sim_config.txt.
+* pMove.h and pMove.cpp - reads the input from the keyboard.
+* pMovers.h and pMovers.cpp - declares and defines the abstract class pMovers from which all "Movers", such as "Player" and "Ball", in the game are derived.
+* pRenderer.h and pRenderer.cpp - this renders the background, walls, goals, players and the ball using the SDL2 library.
+* pSim.h and pSim.cpp - contains code for the mechanisms on the game itself such as setting up, running and updating.
+* sim_config.txt - contains game parameters described in the section above which are read at every startup/execution of the game.
+
 ## Rubric Points
 
 ### README (All Rubric Points REQUIRED)
+
+- [x] A README with instructions is included with the project
+- 
 
 ### Compiling and Testing (All Rubric Points REQUIRED)
 
