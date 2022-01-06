@@ -1,4 +1,4 @@
-# C++ Nanodegree Final Project: Two person Pong Game
+# C++ ND Final Project: Two person Pong Game
 
 This is an implementation of the Pong game. The following resources provided inspiration and guidance for the implementation.
 
